@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="486.0" prefWidth="795.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.entregable.controlador.Pagina1Controller" style="-fx-background-color: skyblue">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane prefHeight="438.0" prefWidth="755.0">
+      <children>
+         <ImageView fitHeight="587.0" fitWidth="737.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../imagenes/intel-factory.jpg" />
+            </image>
+         </ImageView>
+          <Button fx:id="btnentrar" layoutX="327.0" layoutY="338.0" onAction="#onEntrar" prefHeight="57.0" prefWidth="122.0" text="Entrar" />
+         <TextField fx:id="usuariotext" layoutX="369.0" layoutY="135.0" prefHeight="42.0" prefWidth="180.0" />
+         <TextField fx:id="passwordtext" layoutX="369.0" layoutY="227.0" prefHeight="42.0" prefWidth="180.0" />
+         <Label fx:id="usuario" layoutX="243.0" layoutY="135.0" prefHeight="42.0" prefWidth="84.0" text="Usuario:" textFill="#fcfcfc">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="password" layoutX="243.0" layoutY="227.0" prefHeight="42.0" prefWidth="98.0" text="Password:" textFill="#fcfcfc">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+</VBox>

@@ -1,0 +1,65 @@
+use incidencias;
+CREATE TABLE Users(
+id int not null primary key auto_increment,
+usuario varchar(55)not null,
+password varchar(55)not null
+);
+
+INSERT INTO Users(usuario,password)VALUES('manolito','12345');
+INSERT INTO Users(usuario,password)VALUES('maria','12345');
+INSERT INTO Users(usuario,password)VALUES('julian','12345');
+INSERT INTO Users(usuario,password)VALUES('santiago','12345');
+INSERT INTO Users(usuario,password)VALUES('yobel','12345');
+
+
+
+
+
+
+
+USE incidencias;
+CREATE TABLE Incidencias(
+id int not null primary key auto_increment,
+nif_responsable varchar(9) not null,
+fecha_incidencia date not null,
+descripcion varchar(55) not null,
+maquina varchar(7) CHARACTER SET utf8mb3 COLLATE utf8_bin NOT NULL,
+prioridad varchar(9) CHARACTER SET utf8mb3 COLLATE utf8_bin NOT NULL,
+responsable varchar(40) CHARACTER SET utf8mb3 COLLATE utf8_bin NOT NULL
+);
+
+USE incidencias;
+CREATE TABLE Maquinas(
+id int not null primary key auto_increment,
+nombre_maquina varchar(55) not null
+);
+
+INSERT INTO Maquinas(nombre_maquina)VALUES('AM-01');
+INSERT INTO Maquinas(nombre_maquina)VALUES('AM-02');
+INSERT INTO Maquinas(nombre_maquina)VALUES('AM-03');
+INSERT INTO Maquinas(nombre_maquina)VALUES('K-1');
+INSERT INTO Maquinas(nombre_maquina)VALUES('K-2');
+INSERT INTO Maquinas(nombre_maquina)VALUES('K-3');
+
+USE incidencias;
+CREATE TABLE Responsable(
+id int not null primary key auto_increment,
+nif varchar(9) not null,
+nombre varchar(55) not null,
+apellido varchar(55) not null
+);
+
+INSERT INTO Responsable(nombre,apellido,nif)VALUES('Maria','Perez','11111111A');
+INSERT INTO Responsable(nombre,apellido,nif)VALUES('Julian','Camargo','11111111B');
+INSERT INTO Responsable(nombre,apellido,nif)VALUES('Yosbel','Toledo','11111111C');
+INSERT INTO Responsable(nombre,apellido,nif)VALUES('Santiago','Albornoz','11111111D');
+
+USE incidencias;
+CREATE TABLE Prioridad(
+id int not null primary key auto_increment,
+prioridad varchar(55) not null);
+
+INSERT INTO Prioridad(prioridad)VALUES('Urgente');
+INSERT INTO Prioridad(prioridad)VALUES('Media');
+INSERT INTO Prioridad(prioridad)VALUES('Baja');
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="600.0" style="-fx-background-color: skyblue" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.entregable.controlador.Pagina2Controller">
+   <children>
+      <DatePicker fx:id="dtpfecha" layoutX="29.0" layoutY="72.0" />
+      <ComboBox fx:id="cmbmaquina" layoutX="244.0" layoutY="72.0" onAction="#seleccionarMaquina" prefWidth="150.0" />
+      <ComboBox fx:id="cmbprioridad" layoutX="428.0" layoutY="72.0" onAction="#seleccionarPrioridad" prefWidth="150.0" />
+      <ComboBox fx:id="cmbreponsable" layoutX="428.0" layoutY="134.0" onAction="#seleccionarResponsable" prefWidth="150.0" />
+      <Button fx:id="btnguardar" layoutX="494.0" layoutY="188.0" mnemonicParsing="false" onAction="#guardarincidencia" text="Guardar" />
+      <TextArea fx:id="textincidencia" layoutX="29.0" layoutY="134.0" prefHeight="88.0" prefWidth="374.0" />
+      <TableView fx:id="tbltabla" layoutX="29.0" layoutY="230.0" onMouseClicked="#Onseleccionar" prefHeight="200.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="colFecha" prefWidth="110.19997787475586" text="Fecha" />
+          <TableColumn fx:id="colMaquina" prefWidth="104.0" text="Maquina" />
+            <TableColumn fx:id="colPrioridad" prefWidth="200.00001525878906" text="Prioridad" />
+            <TableColumn fx:id="colResponsable" minWidth="0.0" prefWidth="119.20001220703125" text="Responsable" />
+            <TableColumn fx:id="colDescripcion" prefWidth="43.0" text="Descripcion" visible="false" />
+        </columns>
+      </TableView>
+      <Label fx:id="fecha" layoutX="29.0" layoutY="48.0" text="Fecha de la incidencia" />
+      <Label fx:id="maquina" layoutX="244.0" layoutY="48.0" text="Máquina" />
+      <Label fx:id="prioridad" layoutX="428.0" layoutY="48.0" text="Prioridad" />
+      <Label fx:id="responsable" layoutX="428.0" layoutY="107.0" text="Responsable" />
+      <Label layoutX="29.0" layoutY="107.0" text="Descripción" />
+   </children>
+</AnchorPane>
